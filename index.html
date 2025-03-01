@@ -10,38 +10,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100vh;
-            overflow: hidden; /* 禁止页面本身滚动 */
+            overflow: hidden; /* 禁止整个页面滚动 */
         }
         .gallery-container {
-            width: 100vw; /* 让容器宽度占满屏幕 */
-            height: 100vh; /* 让容器高度占满屏幕 */
+            width: 100vw; /* 宽度填满屏幕 */
+            height: 100vh; /* 高度填满屏幕 */
             overflow-y: auto; /* 允许上下滚动 */
-            overflow-x: hidden;
-            scroll-snap-type: y mandatory;
+            overflow-x: hidden; /* 禁止左右滚动 */
+            scroll-snap-type: y mandatory; /* 让图片滑动时自动对齐 */
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .gallery img {
-            width: 100vw; /* 让图片宽度占满屏幕 */
-            height: auto; /* 高度自适应，保证原图完整显示 */
-            scroll-snap-align: center;
+            width: 100vw; /* 让图片宽度填满屏幕 */
+            height: auto; /* 高度自适应，确保比例不变 */
+            scroll-snap-align: center; /* 让滚动更流畅 */
         }
     </style>
 </head>
 <body>
     <h1>《起点Hub》App</h1>
     <div class="gallery-container">
-        <img src="工程总图.png" alt="工程总图">
-        <img src="我的页面.png" alt="我的页面">
-        <img src="论坛.png" alt="论坛">
-        <img src="首页.png" alt="首页">
-        <img src="消息.png" alt="消息">
-        <img src="登录.png" alt="登录">
-        <img src="图标.png" alt="图标">
-        <img src="开屏页.png" alt="开屏页">
+        < img src="工程总图.png" alt="工程总图">
+        < img src="我的页面.png" alt="我的页面">
+        < img src="论坛.png" alt="论坛">
+        < img src="首页.png" alt="首页">
+        < img src="消息.png" alt="消息">
+        < img src="登录.png" alt="登录">
+        < img src="图标.png" alt="图标">
+        < img src="开屏页.png" alt="开屏页">
     </div>
 </body>
 </html>
