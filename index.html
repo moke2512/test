@@ -7,49 +7,41 @@
     <style>
         body {
             margin: 0;
-            overflow: hidden; /* 防止页面滚动 */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow: hidden; /* 禁止页面本身滚动 */
         }
         .gallery-container {
-            width: 100vw; /* 宽度占满整个屏幕 */
-            height: 100vh; /* 高度占满整个屏幕 */
-            overflow-x: auto; /* 允许横向滚动 */
-            overflow-y: hidden;
-            white-space: nowrap;
+            width: 100vw; /* 让容器宽度占满屏幕 */
+            height: 100vh; /* 让容器高度占满屏幕 */
+            overflow-y: auto; /* 允许上下滚动 */
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            scroll-snap-type: x mandatory;
-        }
-        .gallery {
-            display: flex;
-            flex-direction: row;
         }
         .gallery img {
-            width: 1920px; /* 确保图片保持原始宽度 */
-            height: 1040px; /* 确保图片保持原始高度 */
-            object-fit: contain; /* 不裁剪图片，完整显示 */
+            width: 100vw; /* 让图片宽度占满屏幕 */
+            height: auto; /* 高度自适应，保证原图完整显示 */
             scroll-snap-align: center;
-            flex: 0 0 auto;
         }
     </style>
 </head>
 <body>
     <h1>《起点Hub》App</h1>
     <div class="gallery-container">
-        <div class="gallery">
-            <img src="工程总图.png" alt="工程总图">
-            <img src="我的页面.png" alt="我的页面">
-            <img src="论坛.png" alt="论坛">
-            <img src="首页.png" alt="首页">
-            <img src="消息.png" alt="消息">
-            <img src="登录.png" alt="登录">
-            <img src="图标.png" alt="图标">
-            <img src="开屏页.png" alt="开屏页">
-        </div>
+        <img src="工程总图.png" alt="工程总图">
+        <img src="我的页面.png" alt="我的页面">
+        <img src="论坛.png" alt="论坛">
+        <img src="首页.png" alt="首页">
+        <img src="消息.png" alt="消息">
+        <img src="登录.png" alt="登录">
+        <img src="图标.png" alt="图标">
+        <img src="开屏页.png" alt="开屏页">
     </div>
 </body>
 </html>
