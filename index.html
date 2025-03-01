@@ -1,35 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的图片展示</title>
     <style>
-		body{
-			text-align:center;
-			display: flex;
-			flex-direction: column;
-			alihn-items: center;
-			justify-content:center;
-			height: 100vh;
-			}
-		img{
-			max-width: 90%;
-			msx-height: 80vh;
-			height: auto;
-			}
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            max-width: 90%;
+            max-height: 80vh;
+            height: auto;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>《起点Hup》App</h1>
-    <img src="image.jpg" alt="展示图片">
-	<img src1="工程总图.png"  alt="展示图片">
-	<img src2="我的页面.png"  alt="展示图片">
-	<img src3="论坛.png"  alt="展示图片">
-	<img src4="首页.png" alt="展示图片">
-	<img src5="消息.png" alt="展示图片">
-	<img src6="登录.png" alt="展示图片"> 
-	<img src7="图标.png"  alt="展示图片">
-	<img src8="开屏页.png"  alt="展示图片">
+    <h1>《起点Hub》App</h1>
+    < img id="displayImage" src="image.jpg" alt="展示图片">
+    <button onclick="changeImage()">切换图片</button>
+
+    <script>
+        let images = [
+            "工程总图.png",
+            "我的页面.png",
+            "论坛.png",
+            "首页.png",
+            "消息.png",
+            "登录.png",
+            "图标.png",
+            "开屏页.png"
+        ];
+        let index = 0;
+        
+        function changeImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("displayImage").src = images[index];
+        }
+    </script>
 </body>
 </html>
